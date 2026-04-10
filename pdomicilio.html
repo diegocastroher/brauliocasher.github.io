@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pide a Domicilio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+<header>
+    <nav class="nav">
+        <div class="logo">Santa Clara</div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+
+        <ul class="menu" id="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="/html/recetas.html">Recetas</a></li>
+            <li><a href="/html/sobrenos.html">Sobre Nosotros</a></li>
+            <li><a href="/html/pdomicilio.html">Pide a Domicilio</a></li>
+            <li><a href="/html/helados.html">Catalogo</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <video autoplay muted loop>
+        <source src="/img_helado/comprar.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay">
+        <h1>Helados a tu puerta</h1>
+        <p>Disfruta Santa Clara sin salir de casa</p>
+    </div>
+</section>
+
+<section class="contenido">
+    <h2>Elige Un Producto</h2>
+
+    <div class="servicios">
+
+        <div class="card">
+            <img src="/img_helado/helados%20doble.png" alt="Vainilla">
+            <p>Helados</p>
+            <p>$50 MXN</p>
+            <button onclick="agregar('Vainilla')">Agregar</button>
+        </div>
+
+        <div class="card">
+            <img src="/img_helado/malteada.png" alt="Chocolate">
+            <p>Malteadas</p>
+            <p>$55 MXN</p>
+            <button onclick="agregar('Chocolate')">Agregar</button>
+        </div>
+
+        <div class="card">
+            <img src="/img_helado/promo.png" alt="especiales">
+            <p>Especiales</p>
+            <p>$52 MXN</p>
+            <button onclick="Ver Más">Ver Más</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="contenido">
+    <h2>Mi Proxima Compra</h2>
+
+    <div class="row">
+
+      <div class="col-75">
+        <div class="container">
+          <form action="/action_page.php">
+
+            <div class="row">
+              <div class="col-50">
+                <h3>Datos del cliente</h3>
+
+                <label>Nombre completo</label>
+                <input type="text" placeholder="Juan Pérez">
+
+                <label>Email</label>
+                <input type="text" placeholder="correo@email.com">
+
+                <label>Dirección</label>
+                <input type="text" placeholder="Calle 123">
+
+                <label>Ciudad</label>
+                <input type="text" placeholder="Puebla">
+
+                <div class="row">
+                  <div class="col-50">
+                    <label>Estado</label>
+                    <input type="text" placeholder="Puebla">
+                  </div>
+                  <div class="col-50">
+                    <label>Código Postal</label>
+                    <input type="text" placeholder="72000">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-50">
+                <h3>Pago</h3>
+
+                <label>Nombre en tarjeta</label>
+                <input type="text" placeholder="Juan Pérez">
+
+                <label>Número de tarjeta</label>
+                <input type="text" placeholder="1111-2222-3333-4444">
+
+                <label>Mes</label>
+                <input type="text" placeholder="Enero">
+
+                <div class="row">
+                  <div class="col-50">
+                    <label>Año</label>
+                    <input type="text" placeholder="2026">
+                  </div>
+                  <div class="col-50">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <input type="submit" value="Finalizar pedido" class="btn">
+          </form>
+        </div>
+      </div>
+
+      <div class="col-25">
+        <div class="container">
+          <h4>Pedido</h4>
+
+          <ul id="carrito"></ul>
+
+          <hr>
+          <p>Total <span class="price">$0</span></p>
+        </div>
+      </div>
+
+    </div>
+</section>
+<footer class="footer">
+    <a href="https://www.instagram.com/santaclaramx/"><img src="../img_helado/Instagram.png" alt="insta"/></a>
+    <a href="https://www.facebook.com/SantaClaraMex/"><img src="../img_helado/face.png" alt="face"/></a>
+    <a href="https://www.youtube.com/@SantaClaraMex"><img src="../img_helado/youtube.png" alt="youtube"/></a>
+</footer>
+
+<script>
+    const carrito = [];
+
+    function agregar(producto){
+        carrito.push(producto);
+        mostrarCarrito();
+    }
+
+    function mostrarCarrito(){
+        const lista = document.getElementById("carrito");
+        lista.innerHTML = "";
+
+        carrito.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            lista.appendChild(li);
+        });
+    }
+
+    function ordenar(){
+        if(carrito.length === 0){
+            alert("Tu carrito está vacío");
+        } else {
+            alert("Pedido realizado: " + carrito.join(", "));
+        }
+    }
+
+    // menú responsive
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>

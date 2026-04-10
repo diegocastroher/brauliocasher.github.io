@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAT helados</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+<header>
+    <nav class="nav">
+        <div class="logo">Santa Clara</div>
+
+        <ul class="menu">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/html/recetas.html">Recetas</a></li>
+            <li><a href="/html/sobrenos.html">Sobre Nosotros</a></li>
+            <li><a href="/html/pdomicilio.html">Domicilio</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="contenido">
+
+    <h2>Catálogo de Productos</h2>
+
+    <div class="servicios">
+        <div class="card">
+            <img src="/img_helado/heladochocolate.webp" alt="Vainilla">
+            <p>Chocolate</p>
+            <p>$50 MXN</p>
+            <button onclick="agregar('Vainilla')">Agregar</button>
+        </div>
+        <div class="card">
+            <img src="/img_helado/heladofresa.webp" alt="Vainilla">
+            <p>Fresa</p>
+            <p>$50 MXN</p>
+            <button onclick="agregar('Vainilla')">Agregar</button>
+        </div>
+        <div class="card">
+            <img src="/img_helado/heladogalleta.webp" alt="Vainilla">
+            <p>Galleta</p>
+            <p>$50 MXN</p>
+            <button onclick="agregar('Vainilla')">Agregar</button>
+        </div>
+        <div class="card">
+            <img src="/img_helado/heladolimon.webp" alt="Vainilla">
+            <p>Limon</p>
+            <p>$50 MXN</p>
+            <button onclick="agregar('Vainilla')">Agregar</button>
+        </div>
+        <div class="card">
+            <img src="/img_helado/heladotriple.webp" alt="Vainilla">
+            <p>Chocolate Triple</p>
+            <p>$50 MXN</p>
+            <button onclick="agregar('Vainilla')">Agregar</button>
+        </div>
+        <div class="card">
+            <img src="/img_helado/heladogua.jpeg" alt="Vainilla">
+            <p>Guanabana</p>
+            <p>$50 MXN</p>
+            <button onclick="agregar('Vainilla')">Agregar</button>
+        </div>
+    </div>
+
+    <h2>Mi Proxima Compra</h2>
+
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <form>
+
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Datos</h3>
+
+                            <label>Nombre</label>
+                            <input type="text" placeholder="Juan Pérez">
+
+                            <label>Email</label>
+                            <input type="text" placeholder="correo@email.com">
+
+                            <label>Dirección</label>
+                            <input type="text" placeholder="Calle 123">
+
+                        </div>
+
+                        <div class="col-50">
+                            <h3>Pago</h3>
+
+                            <label>Tarjeta</label>
+                            <input type="text" placeholder="1111 2222 3333 4444">
+
+                            <label>Mes</label>
+                            <input type="text" placeholder="Enero">
+
+                            <label>Año</label>
+                            <input type="text" placeholder="2026">
+
+                            <label>CVV</label>
+                            <input type="text" placeholder="123">
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Pagar" class="btn">
+
+                </form>
+            </div>
+        </div>
+
+        <div class="col-25">
+            <div class="container">
+                <h4>Carrito</h4>
+                <p>Producto 1 <span class="price">$50</span></p>
+                <p>Producto 2 <span class="price">$30</span></p>
+                <hr>
+                <p>Total <span class="price"><b>$80</b></span></p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

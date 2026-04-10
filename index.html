@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santa Clara</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header>
+    <nav class="nav">
+        <div class="logo">Santa Clara</div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <ul class="menu" id="menu">
+            <li><a href="../Practica%2024%20Marzo/index.html">Inicio</a></li>
+            <li><a href="html/recetas.html">Recetas</a></li>
+            <li><a href="html/sobrenos.html">Sobre Nosotros</a></li>
+            <li><a href="html/pdomicilio.html">Pide a Domicilio</a></li>
+            <li><a href="/html/helados.html">Catalogo</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="hero">
+    <video autoplay loop muted playsinline>
+        <source src="img_helado/hel.mp4" type="video/mp4" />
+    </video>
+
+    <div class="overlay">
+        <h1>Santa Clara</h1>
+        <p>"Con Devoción, todo sabe mejor"</p>
+    </div>
+</section>
+
+<main>
+    <section class="contenido">
+        <h2>Nuestros Productos:</h2>
+
+        <div class="servicios">
+            <article class="card">
+                <img src="img_helado/helados%20doble.png" alt="Helados" />
+                <p>Helados</p>
+            </article>
+
+            <article class="card">
+                <img src="img_helado/helado%20litro.png" alt="Helado en litro" />
+                <p>Helado en Litro</p>
+            </article>
+
+            <article class="card">
+                <img src="img_helado/paleta.png" alt="Paletas" />
+                <p>Paletas</p>
+            </article>
+
+            <article class="card">
+                <img src="img_helado/malteada.png" alt="Malteadas" />
+                <p>Malteadas</p>
+            </article>
+
+            <article class="card">
+                <img src="img_helado/leche.png" alt="Leche" />
+                <p>Leche</p>
+            </article>
+
+            <article class="card">
+                <img src="img_helado/promo.png" alt="Especiales" />
+                <p>Especiales</p>
+            </article>
+        </div>
+
+        <div class="rating-section">
+            <h3>Califica nuestros productos</h3>
+
+            <div class="stars">
+                <span data-value="1">★</span>
+                <span data-value="2">★</span>
+                <span data-value="3">★</span>
+                <span data-value="4">★</span>
+                <span data-value="5">★</span>
+            </div>
+
+            <p id="rating-value">Selecciona una calificación</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="https://www.instagram.com/santaclaramx/" target="_blank" rel="noopener noreferrer">
+        <img src="img_helado/Instagram.png" alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com/SantaClaraMex/" target="_blank" rel="noopener noreferrer">
+        <img src="img_helado/face.png" alt="Facebook" />
+    </a>
+    <a href="https://www.youtube.com/@SantaClaraMex" target="_blank" rel="noopener noreferrer">
+        <img src="img_helado/youtube.png" alt="YouTube" />
+    </a>
+</footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+
+<script>
+    const stars = document.querySelectorAll(".stars span");
+    const ratingText = document.getElementById("rating-value");
+
+    stars.forEach(star => {
+        star.addEventListener("click", () => {
+            let value = star.getAttribute("data-value");
+
+            stars.forEach(s => s.classList.remove("active"));
+
+            for(let i = 0; i < value; i++){
+                stars[i].classList.add("active");
+            }
+
+            ratingText.textContent = "Calificación: " + value + " estrellas";
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetas</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+<header>
+    <nav class="nav">
+        <div class="logo">Santa Clara</div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+
+        <ul class="menu" id="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/recetas.html">Recetas</a></li>
+            <li><a href="../html/sobrenos.html">Sobre Nosotros</a></li>
+            <li><a href="/html/pdomicilio.html">Pide a Domicilio</a></li>
+            <li><a href="/html/helados.html">Catalogo</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contenido">
+    <h2>Recetas con Helado Santa Clara</h2>
+
+    <div class="tabs">
+
+        <!-- BOTONES -->
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="openTab(event, 'receta1')">Smoothie de Fresa</button>
+            <button class="tab-btn" onclick="openTab(event, 'receta2')">Nacho Ice Cream</button>
+            <button class="tab-btn" onclick="openTab(event, 'receta3')">Sándwich <br>de Helado</button>
+            <button class="tab-btn" onclick="openTab(event, 'receta4')">Taco de Helado</button>
+            <button class="tab-btn" onclick="openTab(event, 'receta5')">Mini Mousse<br>de Chocolate</button>
+        </div>
+
+        <!-- RECETA 1 -->
+        <div id="receta1" class="tab-content active">
+            <div class="card">
+                <h3>Smoothie de Fresa</h3>
+                <h4>Ingredientes</h4><ul>
+                    <li>Fresas: 1 ½ tazas (lavadas, desinfectadas y preferiblemente congeladas).</li>
+                    <li>Base Líquida: 1 taza de leche (puede ser entera, de almendra, coco o avena).</li>
+                    <li>Endulzante: 1 cucharadita de miel, jarabe de agave o 2 dátiles (opcional).</li>
+                    <li>Cremosidad extra: ¼ de taza de yogur griego natural.</li>
+                    <li>Toque cítrico: Unas gotas de jugo de limón (realza el sabor de la fresa).</li>
+                    </ul><Br>
+                <h4>Procedimiento</h4><ol>
+                    <li>Si tus fresas son frescas, te recomiendo cortarlas por la mitad y meterlas al
+                    congelador al menos 2 horas antes. Si las usas al tiempo, deberás añadir ½ taza de
+                    hielo, aunque esto puede diluir un poco el sabor.</li>
+                    <li>Para proteger las cuchillas de tu licuadora y lograr una mezcla homogénea, añade
+                    los ingredientes en este orden:<br>Primero el líquido (leche).<BR>Luego el yogur
+                    y el endulzante. <BR>Al final, las fresas congeladas.
+                    <li>Comienza a velocidad baja para romper los trozos grandes de fruta. 
+                    Sube a velocidad alta durante 30 a 45 segundos hasta que la mezcla se vea
+                    completamente tersa y sin grumos.</li>
+                    <li>¿Muy espeso? Añade un chorrito extra de leche y pulsa de nuevo.<BR>
+                    ¿Muy líquido? Agrega un par de fresas congeladas más o un poco de hielo.</li>
+                </ol>
+                
+                <div class="carousel">
+    <button class="carousel-btn prev" onclick="moveSlide(-1, this)">❮</button>
+
+    <div class="carousel-track">
+        <div class="slide active">
+            <img src="../img_helado/smoothie de fresa_1.png">
+        </div>
+
+        <div class="slide">
+            <img src="../img_helado/smothie de fresa_2.png">
+        </div>
+    </div>
+
+    <button class="carousel-btn next" onclick="moveSlide(1, this)">❯</button>
+</div>
+                
+            </div>
+        </div>
+
+        <!-- RECETA 2 -->
+        <div id="receta2" class="tab-content">
+            <div class="card">
+                <h3>Nacho Ice Cream</h3>
+                <h4>Ingredientes</h4><ul>
+                    <li>Tortillas de harina de trigo (cortadas en triángulos).</li>
+                    <li>Mantequilla derretida.</li>
+                    <li>Azúcar y canela en polvo.</li>
+                    <li>Helado de vainilla, caramelo o dulce de leche (son los que mejor combinan).</li>
+                    <li>Salsa de caramelo caliente o leche condensada teñida con una gota de colorante naranja.</li>
+                    <li>Chips de chocolate negro o pasas.</li>
+                    <li>Crema batida (chantilly).</li>
+                    <li>Fresas picadas o gomitas verdes picadas.</li>
+                    <li>Nueces picadas o sprinkles.</li>
+                    </ul><Br>
+                    
+                <h4>Procedimiento</h4><ol>
+                    <li>En un plato amplio o charola, coloca una base generosa de los totopos de canela ya fríos.</li>
+                    <li>Coloca varias bolas de helado en el centro o distribuidas sobre los totopos.</li>
+                    <li>Baña el helado y las tortillas con la salsa de caramelo (el "queso").</li>
+                    <li>Agrega los chips de chocolate y las fresas picadas por encima.</li>
+                    <li>Termina con un buen copete de crema batida en el centro, simulando la crema agria.</li>
+                    <li>Opcional: Espolvorea un poco más de canela o nueces para dar más textura.</li>
+                </ol>
+                
+                <div class="carousel">
+    <button class="carousel-btn prev" onclick="moveSlide(-1, this)">❮</button>
+
+    <div class="carousel-track">
+        <div class="slide active">
+            <img src="../img_helado/helado2.png">
+        </div>
+
+        <div class="slide">
+            <img src="../img_helado/helado1.png">
+        </div>
+    </div>
+
+    <button class="carousel-btn next" onclick="moveSlide(1, this)">❯</button>
+</div>
+                
+        </div>
+</div>
+        <!-- RECETA 3 -->
+        <div id="receta3" class="tab-content">
+            <div class="card">
+                <h3>Sándwich de Helado</h3>
+                <p>Ingredientes</p><ul>
+                    <li>225g de mantequilla a temperatura ambiente.</li>
+                    <li>150g de azúcar blanca.</li>
+                    <li>100g de azúcar mascabado (aporta humedad).</li>
+                    <li>1 huevo grande.</li>
+                    <li>1 cucharadita de extracto de vainilla.</li>
+                    <li>280g de harina de trigo.</li>
+                    <li>1/2 cucharadita de bicarbonato de sodio.</li>
+                    <li>Una pizca de sal.</li>
+                    <li><mark>Opcional: Chispas de chocolate o cacao en polvo si las prefieres oscuras.</mark></li>
+                    <li>1 litro de tu helado favorito (vainilla, chocolate, fresa o incluso sorbete).</li>
+                    </ul><Br>
+                    
+                    <h4>Procedimiento</h4><ol>
+                    <li>Acremar: Bate la mantequilla con los dos tipos de azúcar hasta que la mezcla esté esponjosa.<br>
+                        Integrar: Añade el huevo y la vainilla; sigue batiendo hasta incorporar bien.<br>
+                        Secos: Tamiza la harina, el bicarbonato y la sal. Agrégalos a la mezcla líquida poco a poco.<br>
+                        Hornear: Forma bolas del mismo tamaño y colócalas en una charola con papel encerado.<br>
+                        Hornea a 180°C por unos 10 a 12 minutos. <br><i><br>Tip: Retíralas cuando los bordes estén apenas dorados;
+                        deben quedar un poco suaves para que no se rompan al congelarse.<br></i><br>Enfriar: Deja que se enfríen
+                        completamente. Si están tibias, derretirán el helado.</li><br>
+                        <li>En lugar de usar una cuchara para servir, prueba este truco:<br>
+                        Saca el bote de helado del congelador unos 5 minutos antes.<br>
+                        Si el helado viene en un bote de cartón cilíndrico, córtalo de forma transversal con un cuchillo
+                        afilado<br> para obtener discos perfectos de helado.<br>
+                        Retira el cartón del borde del disco y colócalo directamente sobre una galleta.</li><br>
+                        <li>Coloca el disco o la bola de helado sobre la base de una galleta y presiona
+                        suavemente con otra galleta encima.</li><br>
+                        <li>Envuelve cada sándwich individualmente en papel film o papel encerado y congélalos
+                        por al menos 2 horas antes de comer. Esto hace que la galleta se hidrate ligeramente con
+                        el helado y se logre esa consistencia icónica.</li> 
+                </ol>
+                    <div class="carousel">
+    <button class="carousel-btn prev" onclick="moveSlide(-1, this)">❮</button>
+
+    <div class="carousel-track">
+
+        <div class="slide active">
+            <img src="../img_helado/sandwich2.png" alt="sandwich1">
+        </div>
+
+        <div class="slide">
+            <img src="../img_helado/Sandich1.png" alt="sandwich2">
+        </div>
+
+    </div>
+
+    <button class="carousel-btn next" onclick="moveSlide(1, this)">❯</button>
+</div>
+            </div>
+        </div>
+
+        <!-- RECETA 4 -->
+        <div id="receta4" class="tab-content">
+            <div class="card">
+                <h3>Taco de Helado</h3>
+                <p>Ingredientes</p><ul>
+                    <li>Puedes usar tortillas de harina (pequeñas).</li>
+                    <li>Mantequilla derretida.</li>
+                    <li>Mezcla de azúcar y canela.</li><br>
+                   <ul>Alternativa gourmet: Barquillos de helado (conos) suavizados al calor y moldeados en forma de taco.</ul><br>
+                    <li>Helado Santa Clara (vainilla, chocolate o fresa funcionan perfecto).</li>
+                    <li>Chocolate blanco rallado teñido de verde o menta fresca picada.</li>
+                    <li>Mermelada de fresa (salsa roja) o cajeta/caramelo.</li>
+                    <li>Cacahuates troceados, chispas de chocolate o fruta fresca picada.</li>
+                </ul><br>
+                <h4>Procedimiento</h4><ul>
+                    <li>Si usas tortillas de harina: Barniza las tortillas con mantequilla y pásalas por la mezcla de azúcar
+                    y canela. Cuélgalas sobre la rejilla del horno (formando una "U" invertida) y hornea a 180°C por 5 a
+                    7 minutos hasta que estén rígidas y crujientes.</li>
+                    <li>Si usas barquillos: Calienta un barquillo en el microondas por unos segundos hasta que se
+                    ablande, dóblalo con cuidado en forma de taco y sostenlo hasta que se enfríe y endurezca.</li>
+                </ul>
+                <ol>
+                    <li>Saca el helado unos minutos antes para que sea fácil de manipular.</li>
+                    <li>Rellena la concha con 2 o 3 bolas de helado, presionando ligeramente para que se asienten bien.</li>
+                    <li>Baña con la "salsa" (mermelada o caramelo).</li>
+                    <li>Espolvorea los toppings para darle color.</li>
+                    <li>Puedes sumergir los bordes del taco en chocolate derretido y granillo antes de servir para un
+                    acabado más profesional.</li>
+                </ol>
+                <div class="carousel">
+    <button class="carousel-btn prev" onclick="moveSlide(-1, this)">❮</button>
+
+    <div class="carousel-track">
+
+        <div class="slide active">
+            <img src="../img_helado/tacohelado1.png" alt="taco1">
+        </div>
+
+        <div class="slide">
+            <img src="../img_helado/taco2.png" alt="imagen2">
+        </div>
+
+    </div>
+
+    <button class="carousel-btn next" onclick="moveSlide(1, this)">❯</button>
+</div>
+            </div>
+        </div>
+
+        <!-- RECETA 5 -->
+        <div id="receta5" class="tab-content">
+            <div class="card">
+                <h3>Mini Mousse de Chocolate</h3>
+                <p>Ingredientes (para 6-8 porciones mini)</p><ul>
+                    <li>150g de chocolate semi-amargo (mínimo 60% cacao para mejor sabor).</li>
+                    <li>250ml de crema para batir (muy fría).</li>
+                    <li>2 cucharadas de azúcar glass (opcional, depende de qué tan dulce sea tu chocolate).</li>
+                    <li>1 cucharadita de esencia de vainilla o una pizca de café instantáneo (esto intensifica
+                    el sabor del chocolate).</li>
+                    <li>Frambuesas frescas, ralladura de chocolate o una hojita de menta.</li>
+                </ul><br>
+                
+                <h4>Procedimiento</h4><ol>
+                    <li>Trocea el chocolate en pedazos pequeños.</li>
+                    <li>Fundelo a baño maría o en el microondas (en lapsos de 20 segundos para que no se queme).</li>
+                    <li>Una vez derretido y suave, déjalo reposar unos minutos hasta que esté a temperatura ambiente,
+                    pero aún líquido. Este paso es vital para que no corte la crema fría.</li>
+                    <li>Batir la Crema: En un bowl frío, bate la crema para batir junto con el azúcar glass y la vainilla.</li>
+                    <li>Bate hasta que se formen picos suaves (que tenga cuerpo pero no esté excesivamente firme).</li>
+                    <li>Mezcla: Añade una tercera parte de la crema batida al chocolate derretido y mezcla de forma
+                    vigorosa para aligerar la textura.</li>
+                    <li>Incorpora el resto de la crema de manera envolvente con una espátula. Haz movimientos circulares
+                    suaves de abajo hacia arriba para no perder las burbujas de aire.</li>
+                    <li>Rellena vasos pequeños, tequileros o moldes miniatura y
+                    Refrigera por al menos 2 horas (lo ideal son 4) para que tome consistencia firme.</li>
+                </ol>
+            
+            <div class="carousel">
+    <button class="carousel-btn prev" onclick="moveSlide(-1, this)">❮</button>
+
+    <div class="carousel-track">
+
+        <div class="slide active">
+            <img src="../img_helado/muse2.png" alt="muse1">
+        </div>
+
+        <div class="slide">
+            <img src="../img_helado/muse1.png" alt="muse2">
+        </div>
+
+    </div>
+
+    <button class="carousel-btn next" onclick="moveSlide(1, this)">❯</button>
+</div>
+            
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <a href="https://www.instagram.com/santaclaramx/"><img src="../img_helado/Instagram.png" alt="insta"/></a>
+    <a href="https://www.facebook.com/SantaClaraMex/"><img src="../img_helado/face.png" alt="face"/></a>
+    <a href="https://www.youtube.com/@SantaClaraMex"><img src="../img_helado/youtube.png" alt="youtube"/></a>
+</footer>
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+// TABS
+function openTab(evt, tabName) {
+    let contents = document.getElementsByClassName("tab-content");
+    let buttons = document.getElementsByClassName("tab-btn");
+
+    for (let i = 0; i < contents.length; i++) {
+        contents[i].classList.remove("active");
+    }
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+    }
+
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+</script>
+<script>
+function moveSlide(direction, btn) {
+    const carousel = btn.closest('.carousel');
+    const slides = carousel.querySelectorAll('.slide');
+
+    let current = 0;
+
+    slides.forEach((slide, index) => {
+        if (slide.classList.contains('active')) {
+            current = index;
+            slide.classList.remove('active');
+        }
+    });
+
+    let next = current + direction;
+
+    if (next < 0) next = slides.length - 1;
+    if (next >= slides.length) next = 0;
+
+    slides[next].classList.add('active');
+}
+</script>
+</body>
+</html>
